@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <%- include("partials/headers.ejs")%>
+    <div id="main_section">
+      <div id="filter">
+        <h2>Brands</h2>
+        <% if (locals.brands) {%> <%brands.forEach((brand) =>{%>
+        <div><%= brand %></div>
+        <%}); %> <% }%>
+      </div>
+      <div id="cubes">
+        <h2>Name</h2>
+        <h2>Size</h2>
+        <h2>Brand</h2>
+        <% if (locals.cubes) {%> <% cubes.forEach((cube) => {%>
+        <div class="cube_info">
+          <div><%= cube.cube_name %></div>
+          <div><%= cube.cube_size %></div>
+          <div><%= cube.cube_brand %></div>
+        </div>
+        <%});%> <%}%>
+        <div class="add_cube"><a href="/addCube">+ Add cube</a></div>
+
+      </div>
+    </div>
+  </body>
+</html>
