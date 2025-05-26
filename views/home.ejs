@@ -12,19 +12,22 @@
       <div id="filter">
         <h2>Brands</h2>
         <% if (locals.brands) {%> <%brands.forEach((brand) =>{%>
-        <div><%= brand %></div>
+        <a href="/?brand=<%=brand%>"><div><%= brand %></div></a>
         <%}); %> <% }%>
+        <a href="/"><div>All brands</div></a>
       </div>
       <div id="cubes">
         <h2>Name</h2>
         <h2>Size</h2>
         <h2>Brand</h2>
         <% if (locals.cubes) {%> <% cubes.forEach((cube) => {%>
-        <div class="cube_info">
-          <div><%= cube.cube_name %></div>
-          <div><%= cube.cube_size %></div>
-          <div><%= cube.cube_brand %></div>
-        </div>
+        <a href="/updateCube/<%=cube.id%>" class="cube_info">
+            <div class="cube_info_container">
+              <div><%= cube.cube_name %></div>
+              <div><%= cube.cube_size %></div>
+              <div><%= cube.cube_brand %></div>
+            </div>
+        </a>
         <%});%> <%}%>
         <div class="add_cube"><a href="/addCube">+ Add cube</a></div>
 

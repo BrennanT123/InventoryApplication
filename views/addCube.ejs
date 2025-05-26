@@ -8,29 +8,6 @@
   </head>
   <body>
     <%- include("partials/headers.ejs")%>
-    <form action="/addNewCube" method="POST" id="newCubeForm">
-      <label for="new_cube_name">Cube Name: </label>
-
-      <input type="text" name="cube_name" id="new_cube_name" required />
-      <label for="new_cube_brand">Cube Brand: </label>
-      <input type="text" name="cube_brand" id="new_cube_brand" required />
-      <label for="new_cube_size">Cube Size: </label>
-      <select name="cube_size" id="new_cube_size" required>
-        <option value="2x2">2x2</option>
-        <option value="3x3">3x3</option>
-        <option value="4x4">4x4</option>
-        <option value="5x5">5x5</option>
-        <option value="6x6">6x6</option>
-        <option value="7x7">7x7</option>
-        <option value="Megaminx">Megaminx</option>
-        <option value="Pyraminx">Pyraminx</option>
-        <option value="Clock">Clock</option>
-        <option value="Square_One">Square One</option>
-        <option value="Skewb">Skewb</option>
-        <option value="Non_WCA">Non WCA</option>
-      </select>
-      <button type="submit">Add Cube</button>
-    </form>
-    <a class="form_home_link" href="/">Home</a>
+    <%- include("partials/cubeForm.ejs")%>
   </body>
 </html>

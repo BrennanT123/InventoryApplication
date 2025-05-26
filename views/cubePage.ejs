@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <%- include("partials/headers.ejs")%>
+    <form action="/updateCube/<%=cubeID%>" method="POST" id="newCubeForm">
+      <label for="new_cube_name">Cube Name: </label>
+      <input
+        type="text"
+        name="cube_name"
+        id="new_cube_name"
+        value="<%=cubeName%>"
+        required
+      />
+      <label for="new_cube_brand">Cube Brand: </label>
+      <input
+        type="text"
+        name="cube_brand"
+        id="new_cube_brand"
+        value="<%=cubeBrand%>"
+        required
+      />
+      <label for="new_cube_size">Cube Size: </label>
+      <select name="cube_size" id="new_cube_size" required>
+        <option disabled selected value>-- select cube size --</option>
+        <option value="2x2">2x2</option>
+        <option value="3x3">3x3</option>
+        <option value="4x4">4x4</option>
+        <option value="5x5">5x5</option>
+        <option value="6x6">6x6</option>
+        <option value="7x7">7x7</option>
+        <option value="Megaminx">Megaminx</option>
+        <option value="Pyraminx">Pyraminx</option>
+        <option value="Clock">Clock</option>
+        <option value="Square_One">Square One</option>
+        <option value="Skewb">Skewb</option>
+        <option value="Non_WCA">Non WCA</option>
+      </select>
+      <button type="submit">Update Cube</button>
+    </form>
+    <a class="form_home_link" href="/">Home</a>
+  </body>
+</html>

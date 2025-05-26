@@ -72,6 +72,11 @@ header {
     grid-column: 1/-1;
     display: flex;
 }
+.cube_info_container
+{
+    display: flex;
+    flex-grow: 1;
+}
 .cube_info div
 {
     width: 33%;
@@ -81,7 +86,7 @@ header {
     grid-column: 1/-1;
 
 }
-.add_cube a
+a
 {
     color: black;
     text-decoration: none;
