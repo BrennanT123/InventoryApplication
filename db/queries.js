@@ -44,10 +44,16 @@ async function sendCubeUpdate(updatedCube,id) {
   );
 }
 
+async function deleteCube(cubeID){
+    await pool.query(
+        `DELETE FROM cubes WHERE id = ($1)`,[cubeID]
+    );
+}
 module.exports = {
   getAllCubes,
   addNewCube,
   searchCubes,
   getCubeForUpdate,
   sendCubeUpdate,
+  deleteCube,
 };

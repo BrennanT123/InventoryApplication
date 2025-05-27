@@ -95,7 +95,7 @@ a
 
 /* New cube form stuff */
 
-#newCubeForm, .form_home_link
+#newCubeForm, .form_home_link,#deleteCubeForm
 {
     margin: 10px 10%;
 }
