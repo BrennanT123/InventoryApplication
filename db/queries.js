@@ -12,6 +12,15 @@ async function addNewCube(newCube) {
   );
 }
 
+
+
+/**
+ * Had to do the value for search like this because of the ILIKE function
+ * It needs the % signs around the search for ILIKE but if I included it in the query it would have
+ * interpreted it as %$1% and not assumed the 1 is a variable it needs to insert.
+ * 
+ * ILIKE is not case sensitive
+ */
 async function searchCubes(search) {
   const { rows } = await pool.query(
     `SELECT * FROM cubes 
